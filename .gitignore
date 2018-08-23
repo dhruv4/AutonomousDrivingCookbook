@@ -289,3 +289,21 @@ __pycache__/
 
 # Python notebook checkpoints
 .ipynb_checkpoints
+
+
+# Runtime data from tutorials
+data*
+model*
+
+#Hawaii
+AD_Cookbook_AirSim/
+DeepLaneDetection/images/*
+DeepLaneDetection/videos/*
+DeepLaneDetection/model/lanes/*
+DeepLaneDetection/*.h5
+
+#Data
+DeepLaneDetection/*.mp4
+DeepLaneDetection/*.p
+DeepLaneDetection/*.jpg
+DeepLaneDetection/*.npy
