@@ -2,9 +2,16 @@ import numpy as np
 import cv2
 from scipy.misc import imresize
 import PIL
+from math import isclose
 
 def atPos(curr, tar):
     return curr[b'position'] == tar[b'position']
+
+def nearPos(curr, tar):
+    
+    return isclose(curr[b'position'][b'x_val'], tar[b'position'][b'x_val'], rel_tol=0.005) \
+        and isclose(curr[b'position'][b'y_val'], tar[b'position'][b'y_val'], rel_tol=0.005) \
+        and isclose(curr[b'position'][b'z_val'], tar[b'position'][b'z_val'], rel_tol=0.01)
 
 def draw_lanes(model, image, label=np.array([]), predshape=(80, 160, 3), shape=(1080, 1632, 3)):
         
